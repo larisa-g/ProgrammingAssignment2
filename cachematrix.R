@@ -1,10 +1,19 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Second assignment> write an R function to cache the inverse of a matrix
 
-## Write a short comment describing this function
+## makeCacheMatrix is a function that creates a matrix object
+## that can cache its inverse
 
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix <- function(x = matrix()) { ##x is the matrix
+m<-NULL ## m is the inverse
+set <function(y){  
+  x<<-y ##takes y as argument
+  ##and assign it to the matrix x
+  m<<-NULL
+}
+get<-function()x ##retrieves x
+setInverse <- function (inverse) m<<-inverse 
+getInverse <- function () m
+list(set = set, get = get, setInverse=setInverse, getInverse=getInverse)
 }
 
 
