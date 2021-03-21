@@ -17,8 +17,19 @@ list(set = set, get = get, setInverse=setInverse, getInverse=getInverse)
 }
 
 
-## Write a short comment describing this function
+## fcacheSolve computes the inverse of the matrix returned
+## by makeCaheMatrix
+##cacheSolve retrieves inverse from cache if
+##the matrix has not changed and the invers has been calculated
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+  m <- x$getInverse()
+  if(!is.null(m)) {
+    message("cached")
+    return(m)
+  }
+  mat <- x$get()
+  
 }
+
